@@ -1,12 +1,16 @@
 import React from 'react';
+import EpisodeCards from './components/EpisodeCards'
 import './App.css';
 
+
 function App() {
+
   return (
     <div className="App">
-      <h1>Hello World!</h1>
+      <EpisodeCards />
     </div>
   );
 }
+
 
 export default App;

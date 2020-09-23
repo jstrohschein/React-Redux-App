@@ -1,32 +1,38 @@
-import { FETCH_DATA_START, FETCH_DATA_SUCCESS, FETCH_DATA_FAIL } from '../actions/index'
+import { FETCH_DATA_START, FETCH_DATA_SUCCESS, FETCH_DATA_FAIL } from '../actions/actionTypes'
 
-const initState = {
-  name: ''
+const initialState = {
+  loading: false,
+  error: '',
+  data: []
 }
 
-export const reducer = ( state = initState, action ) => {
+export const reducer = ( state = initialState, action ) => {
 
   switch ( action.type ){
+
     case FETCH_DATA_START:
       return {
         ...state,
-        //stuff
+        loading: true
       }
 
     case FETCH_DATA_SUCCESS:
       return{
         ...state,
-        //stuff
+        loading: false,
+        data: action.payload,
+        error: ''
       }
 
     case FETCH_DATA_FAIL:
       return {
         ...state,
+        loading: false,
+        data: [],
         error: action.payload
       }
 
-    default:
-      return state;
+    default: return state;
   }
 
 }
