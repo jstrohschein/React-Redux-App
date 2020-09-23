@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+
+.series-card {
+  width: 250px;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.series-img {
+  height: 300px;
+}
+
+.series-body {
+  height: 450px;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.synopsis {
+  font-size: .8rem;
+}
+
+.text-muted {
+  position: absolute;
+  bottom: 3%;
+  left: 25%;
+}
